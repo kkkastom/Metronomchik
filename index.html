@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metronome</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="metronome-container">
+        <h1>Метроном</h1>
+        
+        <div class="bpm-display">
+            <div class="bpm-value" id="bpmValue">120</div>
+            <div class="bpm-label">Ударов в минуту</div>
+        </div>
+        
+        <div class="visual-indicator" id="visualIndicator"></div>
+        
+        <div class="bpm-slider">
+            <input type="range" id="bpmSlider" min="40" max="200" value="120">
+        </div>
+        
+        <div class="adjust-buttons">
+            <button id="bpmMinus">-5</button>
+            <button id="bpmMinus1">-1</button>
+            <button id="bpmPlus1">+1</button>
+            <button id="bpmPlus">+5</button>
+        </div>
+        
+        <div class="time-signature">
+            <button class="time-btn active" data-beats="4">4/4</button>
+            <button class="time-btn" data-beats="3">3/4</button>
+        </div>
+        
+        <div class="beat-counter" id="beatCounter">
+        </div>
+        
+        <button class="start-stop" id="startStopBtn">Старт</button>
+        
+        <div class="tap-tempo">
+            <button id="tapTempo">Наиграть темп</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

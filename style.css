@@ -1,0 +1,173 @@
+:root {
+    --bg-color: #121212;
+    --text-color: #f5f5f5;
+    --accent-color: #4CAF50;
+    --control-bg: #2d2d2d;
+    --border-color: #444;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.metronome-container {
+    max-width: 400px;
+    width: 100%;
+    background-color: var(--control-bg);
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    text-align: center;
+    margin-top: 0;
+    color: var(--accent-color);
+    font-weight: 300;
+}
+
+.bpm-display {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.bpm-value {
+    font-size: 4rem;
+    font-weight: 300;
+    color: var(--accent-color);
+}
+
+.bpm-label {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    opacity: 0.7;
+}
+
+.controls {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.bpm-slider {
+    width: 100%;
+    margin: 20px 0;
+}
+
+.bpm-slider input[type="range"] {
+    width: 100%;
+    -webkit-appearance: none;
+    height: 6px;
+    background: #444;
+    border-radius: 3px;
+    outline: none;
+}
+
+.bpm-slider input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    background: var(--accent-color);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.adjust-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+button {
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #3e8e41;
+}
+
+.start-stop {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.time-signature {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.time-btn {
+    background-color: transparent;
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+}
+
+.time-btn.active {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+}
+
+.visual-indicator {
+    width: 100px;
+    height: 40px;
+    background-color: var(--accent-color);
+    border-radius: 50%;
+    margin: 20px auto;
+    opacity: 0;
+    transition: opacity 0.1s;
+}
+
+.beat-counter {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.beat-dot {
+    width: 15px;
+    height: 15px;
+    background-color: #444;
+    border-radius: 50%;
+    transition: background-color 0.2s;
+}
+
+.beat-dot.active {
+    background-color: var(--accent-color);
+}
+
+.tap-tempo {
+    margin-top: 15px;
+
+}
+
+@media (max-width: 480px) {
+    .metronome-container {
+        padding: 20px;
+    }
+    
+    .bpm-value {
+        font-size: 3rem;
+    }
+}
